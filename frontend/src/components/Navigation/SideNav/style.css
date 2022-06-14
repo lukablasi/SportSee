@@ -1,0 +1,29 @@
+.side-nav {
+    width: 90px;
+    position: absolute;
+    top:90px;
+    left:0;
+    bottom:0;
+    background-color: #020203;
+}
+
+.icon-collection {
+    position:absolute;
+    bottom: 30%;
+
+  margin-left: 10px;
+}
+
+.icon-collection svg {
+    padding: 6px 0px;
+}
+
+.copywright {
+    font-size: 12px;
+    position: absolute;
+    margin-left:-24px;
+    bottom: 12%;
+    
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
