@@ -1,0 +1,21 @@
+main {
+    position: absolute;
+    padding: 50px;
+    top: 90px;
+    right: 0;
+    bottom:0;
+    left: 90px;
+
+}
+
+section {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: calc(100% - 140px)
+
+}
+
+.charts-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

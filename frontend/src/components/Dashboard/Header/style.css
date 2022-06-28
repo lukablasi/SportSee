@@ -1,0 +1,15 @@
+.hello {
+    font-size: 48px;
+    color: #000000;
+
+}
+
+.name {
+    color:#FF0101;
+}
+
+.greeting {
+    color: #000000;
+    font-size: 18px;
+    margin: 24px 0;
+}
