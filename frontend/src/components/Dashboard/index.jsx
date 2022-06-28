@@ -2,10 +2,10 @@ import "./style.css";
 import Header from "./Header";
 import DayliActivity from "./DayliActivity";
 
-function Dashboard() {
+function Dashboard({ user }) {
   return (
     <main>
-      <Header />
+      <Header userName={user.userInfos.firstName} />
 
       <section>
         <div className="charts-container">

@@ -1,10 +1,10 @@
 import "./style.css";
 
-function Header() {
+function Header({ userName }) {
   return (
     <div>
       <div className="hello">
-        Hello <span className="name">Thomas</span>
+        Hello <span className="name">{userName}</span>
       </div>
       <div className="greeting">
         Congratulations! You reached yesterday’s goal! 👏
