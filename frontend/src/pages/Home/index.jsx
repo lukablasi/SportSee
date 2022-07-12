@@ -1,18 +1,33 @@
 import "./style.css";
 import useFetchData from "../../apiCall";
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Navigation from "../../components/Navigation";
 import Dashboard from "../../components/Dashboard";
 
 function Home() {
   const { id } = useParams();
-  const data = useFetchData(`http://localhost:3000/user/${id}`);
+  const user = useFetchData(`http://localhost:3000/user/${id}`);
+  const activity = useFetchData(`http://localhost:3000/user/${id}/activity`);
+  const averageSessions = useFetchData(
+    `http://localhost:3000/user/${id}/average-sessions`
+  );
+  const performance = useFetchData(
+    `http://localhost:3000/user/${id}/performance`
+  );
 
   return (
     <div className="home">
       <Navigation />
-      {data.loading === false && <Dashboard user={data.data.data} />}
+      {user.loading === false && activity.loading === false && (
+        <Dashboard
+          user={user.data.data}
+          activity={activity.data.data}
+          averageSessions={averageSessions.data.data}
+          performance={performance.data.data.data}
+          indicators={performance.data.data.kind}
+          score={user.data.data.todayScore}
+        />
+      )}
     </div>
   );
 }

@@ -3,3 +3,16 @@
     background-color: #FBFBFB;
 }
 
+.dailyActivity-tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #E60000;
+    font-size: 12px;
+  }
+
+.dailyActivity-label {
+    padding: 7px;
+
+}

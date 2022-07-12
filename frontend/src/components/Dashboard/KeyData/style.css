@@ -1,0 +1,24 @@
+.key-data-container {
+    display:flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10px;
+}
+
+.key-data {
+    display:flex;
+    flex: 1;
+    padding: 20px;
+    background-color: #FBFBFB;
+}
+
+.key-data-details {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+
+.key-data-name {
+    color: #74798C;
+    font-size: 12px;
+    margin-top: 10px;
+}
