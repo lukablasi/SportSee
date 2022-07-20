@@ -1,10 +1,19 @@
 import "./style.css";
+import PropTypes from "prop-types";
 
-import React, { PureComponent } from "react";
+/**
+ * component is displaying chart with daily activities
+ * @param {array} sessions
+ * @example
+ * const sessions = [{"day":"2020-07-01","kilogram":80,"calories":240}, {"day":"2020-07-02","kilogram":80,"calories":220}]
+ * return (
+ * <DayliActivity sessions={sessions} />
+ * )
+ */
+
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -83,3 +92,11 @@ export default function DayliActivity({ sessions }) {
     </ResponsiveContainer>
   );
 }
+
+DayliActivity.propTypes = {
+  sessions: PropTypes.array.isRequired,
+};
+
+DayliActivity.defauktProps = {
+  sessions: [],
+};

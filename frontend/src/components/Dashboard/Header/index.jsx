@@ -1,4 +1,14 @@
 import "./style.css";
+import PropTypes from "prop-types";
+
+/**
+ * component for greeting a user
+ * @param {string} userName
+ * @example const userName = "Adam"
+ * @returns (
+ * <Header userName={userName} />
+ * )
+ */
 
 function Header({ userName }) {
   return (
@@ -12,5 +22,13 @@ function Header({ userName }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  userName: PropTypes.string.isRequired,
+};
+
+Header.defaultProps = {
+  userName: "User",
+};
 
 export default Header;

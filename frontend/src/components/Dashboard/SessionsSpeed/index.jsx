@@ -1,15 +1,15 @@
-import React, { PureComponent } from "react";
 import "./style.css";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
+import PropTypes from "prop-types";
+import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+
+/**
+ * component displaying sessions spead on a linear chart
+ * @param {array} sessions
+ * @example const sessions = [{"day": 1, "sessionLength": 30}, {"day": 2, "sessionLength": 50}]
+ * @returns (
+ *  <SessionsSpeed sessions={sessions} />
+ * )
+ */
 
 export default function SessionsSpeed({ sessions }) {
   const data = sessions.map((session) => ({
@@ -72,3 +72,11 @@ export default function SessionsSpeed({ sessions }) {
     </ResponsiveContainer>
   );
 }
+
+SessionsSpeed.propTypes = {
+  sessions: PropTypes.array.isRequired,
+};
+
+SessionsSpeed.defaultProps = {
+  sessions: [],
+};

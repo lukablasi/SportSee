@@ -1,4 +1,19 @@
 import "./style.css";
+import PropTypes from "prop-types";
+
+/**
+ * component for displaying list of details on right side
+ * @param {object} keyData returns detailed information about calories, proteins, carbs and lipides
+ * @example const keyData = {
+    calorieCount: 100,
+    carbohydrateCount: 100,
+    lipidCount: 100,
+    proteinCount: 100,
+  }
+ * @returns {
+  <KeyData keyData={keyData} />
+ }
+ */
 
 function KeyData({ keyData }) {
   return (
@@ -129,5 +144,18 @@ function KeyData({ keyData }) {
     </div>
   );
 }
+
+KeyData.propTypes = {
+  keyData: PropTypes.object.isRequired,
+};
+
+KeyData.defaultProps = {
+  keyData: {
+    calorieCount: 100,
+    carbohydrateCount: 100,
+    lipidCount: 100,
+    proteinCount: 100,
+  },
+};
 
 export default KeyData;

@@ -1,4 +1,14 @@
-import React, { PureComponent } from "react";
+import PropTypes from "prop-types";
+
+/**
+ * component for displaying overall score
+ * @param {number} score
+ * @example const score = 0.1;
+ * @returns (
+ *  <Score score={score} />
+ * )
+ */
+
 import {
   RadialBarChart,
   RadialBar,
@@ -59,3 +69,11 @@ export default function Score({ score }) {
     </ResponsiveContainer>
   );
 }
+
+Score.propTypes = {
+  score: PropTypes.number.isRequired,
+};
+
+Score.defaultProps = {
+  score: 0,
+};

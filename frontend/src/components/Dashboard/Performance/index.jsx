@@ -1,5 +1,18 @@
-import React, { PureComponent } from "react";
 import "./style.css";
+import PropTypes from "prop-types";
+
+/**
+ * component for displaying performance chart
+ * @param {array} performance data for user's performance
+ * @param {object} indicators labels for the data
+ * @example
+ * const performance = [{value: 80, kind:1}, {value: 120, kind:2}];
+ * const indicators = {"1": 'cardio', "2": 'energy'};
+ * @returns (
+ * <Performance performance={performance} indicators={indicators} />
+ * )
+ */
+
 import {
   Radar,
   RadarChart,
@@ -39,3 +52,13 @@ export default function Performance({ performance, indicators }) {
     </ResponsiveContainer>
   );
 }
+
+Performance.propTypes = {
+  performance: PropTypes.array.isRequired,
+  indicators: PropTypes.object.isRequired,
+};
+
+Performance.defaultProps = {
+  performance: [],
+  indicators: {},
+};
