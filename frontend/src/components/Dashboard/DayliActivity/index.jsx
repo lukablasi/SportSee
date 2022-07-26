@@ -97,6 +97,6 @@ DayliActivity.propTypes = {
   sessions: PropTypes.array.isRequired,
 };
 
-DayliActivity.defauktProps = {
+DayliActivity.defaultProps = {
   sessions: [],
 };
